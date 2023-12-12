@@ -9,7 +9,7 @@ pipeline {
                 sh "echo Hello everyone"
                 sh 'uptime'
                 sh 'df -hT'
-                sh 'Name of the Variable is ${env_url}'
+                sh 'echo "Name of the Variable is ${env_url}"'
             }
         }
 
