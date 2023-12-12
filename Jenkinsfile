@@ -4,7 +4,8 @@ pipeline {
         stage ('Name of the stage = 1'){
             steps {
                 sh "echo Hello everyone"
-                sh "uptime"
+                sh 'uptime'
+                sh 'df -hT'
             }
         }
 
