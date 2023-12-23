@@ -11,6 +11,7 @@ pipeline {
                 sh 'uptime'
                 sh 'df -hT'
                 sh 'echo "Name of the Variable is ${env_url}"'
+                sh "env"
             }
         }
 
