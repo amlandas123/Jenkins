@@ -13,8 +13,13 @@ pipeline {
     }
 
     // triggers { cron('*/1 * * * *') }
+    
     triggers { pollSCM('*/1 * * * *') }
-    options { buildDiscarder(logRotator(numToKeepStr: '3')) }
+    
+    options { 
+        buildDiscarder(logRotator(numToKeepStr: '10')) 
+        timeout(time: 5, unit: 'MINUTES')
+    }
 
     stages {
         stage ('Name of the stage = 1'){
