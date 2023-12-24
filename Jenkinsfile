@@ -34,6 +34,7 @@ pipeline {
                 sh "echo Keep your hard work"
                 sh "hostname"
                 sh 'echo "Name of the Variable is ${task_url}"'
+                sh "touch file1.txt"
             }
         }
         
