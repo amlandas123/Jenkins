@@ -21,6 +21,10 @@ pipeline {
         timeout(time: 5, unit: 'MINUTES')
     }
 
+    tools {
+        maven 'maven-394' 
+    }
+
     stages {
         stage ('Name of the stage = 1'){
             steps {
@@ -43,8 +47,14 @@ pipeline {
                 sh "touch file1.txt"
             }
         }
-        
-        stage ('Name of the stage = 3'){
+
+        stage('name of the stage = 3') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+
+        stage ('Name of the stage = 4'){
             environment{
                 web_url='www.dimple.co.in'
             }
