@@ -46,6 +46,7 @@ pipeline {
                  sh "free -m"
                  sh 'echo "Hello the stage 3 variable is ${web_url}"'
                  sh "echo This is the 3rd stage printing"   
+                 sh "echo The Global Variable is ${env_url}"
             }
 
         }
