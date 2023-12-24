@@ -25,6 +25,18 @@ pipeline {
                 sh 'echo "Name of the Variable is ${task_url}"'
             }
         }
+        
+        stage ('Name of the stage == 3'){
+            environment{
+                web_url='www.dimple.co.in'
+            }
+            steps {
+                 sh "free -m"
+                 sh 'echo "Hello the stage 3 variable is ${web_url}"'
+                 sh "echo This is the 3rd stage printing"   
+            }
+
+        }
     }    
 }
     
