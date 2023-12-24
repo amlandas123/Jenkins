@@ -13,6 +13,7 @@ pipeline {
     }
 
     // triggers { cron('*/1 * * * *') }
+    triggers { pollSCM('*/1 * * * *') }
 
     stages {
         stage ('Name of the stage = 1'){
