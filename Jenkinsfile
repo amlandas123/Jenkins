@@ -68,6 +68,23 @@ pipeline {
             }
 
         }
+        stage ('Demo on Parallel Job'){
+            parallel{
+                steps {
+                    sh "echo Hello everyone we are working on parallel job 1"
+                    sh "sleep 120"
+                }
+
+                steps {
+                    sh "echo Still we are working on parallel job"
+                    sh "sleep 120"
+                }
+                steps {
+                    sh "echo we are about to complete the parallel job"
+                    sh "sleep 120"
+                }
+            }
+        }
     }    
 }
     
