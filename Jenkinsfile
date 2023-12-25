@@ -52,7 +52,7 @@ pipeline {
         stage('name of the stage = 3') {
             steps {
                 sh 'mvn --version'
-                sh 'ant --version'
+                sh 'ant -version'
             }
         }
 
