@@ -23,6 +23,7 @@ pipeline {
 
     tools {
         maven 'maven-394' 
+        ant 'ant-11011'
     }
 
     stages {
@@ -51,6 +52,7 @@ pipeline {
         stage('name of the stage = 3') {
             steps {
                 sh 'mvn --version'
+                sh 'ant --version'
             }
         }
 
