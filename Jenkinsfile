@@ -78,7 +78,7 @@ pipeline {
                 }
                 stage ('Executing 2') {
                     steps {
-                        sh "ehco Download is in progress"
+                        sh "echo Download is in progress"
                         sh "sleep 120"
                     }
                 }
