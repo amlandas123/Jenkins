@@ -18,5 +18,10 @@ pipeline{
                 sh "echo name of the city is ${place_var}"
             }
         }
+        stage("This is third"){
+            steps{
+                sh 'hostnamectl'
+            }
+        }
     }
 }    
