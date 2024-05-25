@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    triggers {
+        cron('*/2 * * * 1-5')
+    }
     parameters {
         // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
         // text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -8,6 +11,8 @@ pipeline{
         choice(name: 'component', choices: ['frontend', 'user', 'shipping'], description: 'Pick something')
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+
+
     environment{
         env_var = "www.google.com"
         place_var = "Mumbai"
