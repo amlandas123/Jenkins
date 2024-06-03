@@ -14,7 +14,7 @@ pipeline{
         choice(name: 'component', choices: ['frontend', 'user', 'shipping'], description: 'Pick something')
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-
+    options { buildDiscarder(logRotator(numToKeepStr: '1')) }
 
     environment{
         env_var = "www.google.com"
