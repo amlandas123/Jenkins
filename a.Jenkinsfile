@@ -14,7 +14,10 @@ pipeline{
         choice(name: 'component', choices: ['frontend', 'user', 'shipping'], description: 'Pick something')
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-    options { buildDiscarder(logRotator(numToKeepStr: '5')) }
+    options { buildDiscarder(logRotator(numToKeepStr: '5')) 
+              timeout(time: 2, unit: 'MINUTES')   
+    
+    }
 
     environment{
         env_var = "www.google.com"
@@ -26,6 +29,7 @@ pipeline{
             steps{
                 sh 'uname -r'
                 sh "echo name of the url is ${env_var}"
+                sh "sleep 150"
             }
         }
         stage("This is second"){
