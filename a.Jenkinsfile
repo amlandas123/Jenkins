@@ -1,8 +1,11 @@
 pipeline{
     agent any
-    triggers {
-        cron('*/2 * * * 1-5')
-    }
+    // triggers {
+    //     cron('*/2 * * * 1-5')
+    // }
+    triggers { 
+        pollSCM('H */1 * * 1-5') 
+        }
     parameters {
         // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
         // text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
