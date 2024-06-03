@@ -26,7 +26,7 @@ pipeline{
     stages{
         stage("This is first"){
             steps{
-                sh 'mvn'
+                sh 'mvn --version'
                 sh "echo name of the url is ${env_var}"
                 sh "sleep 150"
             }
