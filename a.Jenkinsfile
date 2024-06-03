@@ -6,7 +6,7 @@ pipeline{
     }
 
     tools {
-        maven 'apache-maven-3.9.0' 
+        maven 'apache-maven-390' 
     }
     parameters {
         choice(name: 'env', choices: ['dev', 'prod'], description: 'Pick something')
