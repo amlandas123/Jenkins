@@ -15,7 +15,7 @@ pipeline{
         // password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     options { buildDiscarder(logRotator(numToKeepStr: '5')) 
-              timeout(time: 2, unit: 'MINUTES')   
+              timeout(time: 4, unit: 'MINUTES')   
     
     }
 
