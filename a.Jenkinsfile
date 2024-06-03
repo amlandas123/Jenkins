@@ -43,4 +43,30 @@ pipeline{
             }
         }
     }
+
+    stages{
+        stage("Demo on parallel stages"){
+        parallel{
+            stage("Download-1"){
+                steps{
+                    sh "echo Download-1 is in progress"
+                    sh "sleep 120"
+                }
+            }
+            stage("Download-2"){
+                steps{
+                    sh "echo Download-2 is in progress"
+                    sh "sleep 120"
+                }
+
+            }
+            stage("Download-3"){
+                steps{
+                    sh "echo Download-3" is in progress
+                }
+
+            }
+        }        
+        }
+    }
 }    
