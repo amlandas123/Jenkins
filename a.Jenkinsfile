@@ -42,9 +42,6 @@ pipeline{
                 sh 'hostnamectl'
             }
         }
-    }
-
-    stages{
         stage("Demo on parallel stages"){
             parallel{
                 stage("Download-1"){
@@ -67,6 +64,6 @@ pipeline{
 
             }
         }        
-        }
+    }
     }
 }    
