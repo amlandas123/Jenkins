@@ -24,7 +24,7 @@ pipeline{
     stages{
         stage("This is first"){
             steps{
-                sh 'uptime'
+                sh 'uname -r'
                 sh "echo name of the url is ${env_var}"
             }
         }
