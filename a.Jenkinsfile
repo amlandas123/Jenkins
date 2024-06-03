@@ -4,7 +4,7 @@ pipeline{
     //     cron('*/2 * * * 1-5')
     // }
     triggers { 
-        pollSCM('H */1 * * 1-5') 
+        pollSCM('*/1 * * * *') 
         }
     parameters {
         // string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
