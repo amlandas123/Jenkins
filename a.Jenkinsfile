@@ -62,7 +62,7 @@ pipeline{
             }
             stage("Download-3"){
                 steps{
-                    sh "echo Download-3" is in progress
+                    sh "echo Download-3 is in progress"
                 }
 
             }
