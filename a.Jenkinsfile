@@ -19,7 +19,7 @@ pipeline{
     }
 
     environment{
-        env_var = "www.google.com"
+        env_var = "www.facebook.com"
         place_var = "Mumbai"
     }
     
@@ -27,7 +27,8 @@ pipeline{
         stage("This is first"){
             steps{
                 sh 'mvn --version'
-                sh "echo name of the url is ${env_var}"
+                sh "echo Welcome to Jenkins World"
+                //sh "echo name of the url is ${env_var}"
                 // sh "sleep 150"
             }
         }
@@ -35,6 +36,7 @@ pipeline{
             steps{
                 sh 'df -hT'
                 sh "echo name of the city is ${place_var}"
+                sh "echo name of the url is ${env_var}"
             }
         }
         stage("This is third"){
